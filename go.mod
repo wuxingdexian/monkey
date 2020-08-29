@@ -1,3 +1,3 @@
-module bou.ke/monkey
+module wuxingdexian/monkey
 
 go 1.13

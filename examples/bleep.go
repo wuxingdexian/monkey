@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"bou.ke/monkey"
+	"wuxingdexian/monkey"
 )
 
 func main() {
