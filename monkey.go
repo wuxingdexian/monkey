@@ -34,6 +34,12 @@ type PatchGuard struct {
 	replacement reflect.Value
 }
 
+func NewPatchGuard(target, replacement interface{}) *PatchGuard {
+	t := reflect.ValueOf(target)
+	r := reflect.ValueOf(replacement)
+	return &PatchGuard{t, r}
+}
+
 func (g *PatchGuard) Unpatch() {
 	unpatchValue(g.target)
 }
