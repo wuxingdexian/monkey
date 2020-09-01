@@ -1,4 +1,4 @@
-package monkey // import "wuxingdexian/monkey"
+package monkey // import "github.com/wuxingdexian/monkey"
 
 import (
 	"fmt"
@@ -38,6 +38,16 @@ func NewPatchGuard(target, replacement interface{}) *PatchGuard {
 	t := reflect.ValueOf(target)
 	r := reflect.ValueOf(replacement)
 	return &PatchGuard{t, r}
+}
+
+func NewInstancePatchGuard(target reflect.Type, methodName string, replacement interface{}) *PatchGuard {
+	m, ok := target.MethodByName(methodName)
+	if !ok {
+		panic(fmt.Sprintf("unknown method %s", methodName))
+	}
+	r := reflect.ValueOf(replacement)
+
+	return &PatchGuard{m.Func, r}
 }
 
 func (g *PatchGuard) Unpatch() {

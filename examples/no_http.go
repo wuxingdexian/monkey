@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"strings"
 
-	"wuxingdexian/monkey"
+	"github.com/wuxingdexian/monkey"
 )
 
 func main() {

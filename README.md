@@ -22,7 +22,7 @@ import (
 	"os"
 	"strings"
 
-	"wuxingdexian/monkey"
+	"github.com/wuxingdexian/monkey"
 )
 
 func main() {
@@ -50,7 +50,7 @@ import (
 	"net/http"
 	"reflect"
 
-	"wuxingdexian/monkey"
+	"github.com/wuxingdexian/monkey"
 )
 
 func main() {
@@ -79,7 +79,7 @@ import (
 	"reflect"
 	"strings"
 
-	"wuxingdexian/monkey"
+	"github.com/wuxingdexian/monkey"
 )
 
 func main() {
